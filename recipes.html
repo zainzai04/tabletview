@@ -20,12 +20,21 @@
         </ul>
     </nav>
 
+    <nav class="tabb">
+        <ul>
+            <li class="lia"><a href = "#top" id = "Skip">Header</a></li>
+            <li class="lia"><a href = "#te" id = "Skip">Tomato & Eggs</a></li>
+            <li class="lia"><a href = "#tlc" id = "Skip">Tres Leches Cake</a></li>
+            <li class="lia"><a href = "#dbp" id = "Skip">Dutch Baby Pancake</a></li>
+        </ul>
+    </nav>
+
     <main id = "main">
         <div>
             <h1>Recipes</h1>
         </div>
         <div>
-            <h2>Tomato and Eggs</h2>
+            <h2 id = "te">Tomato and Eggs</h2>
 
             <img src="recipes/images/tomato-egg-main-image.jpeg" alt="" width="400">
 
@@ -69,7 +78,7 @@
             <!--Eric Xu-->
         </div>
     <div>
-        <h2>Tres Leches Cake</h2>
+        <h2 id = "tlc">Tres Leches Cake</h2>
     
         <img src="https://www.theplazarestaurant.com/wp-content/uploads/2019/07/tres-leches-cake-66-200x300.jpg" width = "400" alt="Tres Leches Cake">
             <p><b>Origin:</b> Latin American</p>
@@ -120,7 +129,7 @@
             <!-- Marcelo Lopez -->
     </div>
     <div>
-        <h2>Dutch Baby Pancake</h2>
+        <h2 id = "dbp">Dutch Baby Pancake</h2>
 
     <img src="recipes/images/dutchbaby.JPG" width = "400" alt="Dutch Baby Pancake">
             <p><b>Origin:</b> Washington </p>
@@ -157,6 +166,21 @@
         </div>
         <!-- Danny Mo/ danmor -->
     </div>
+
+    <script src="fslightbox.js"></script>
+
+    <script>
+    document.querySelectorAll('img').forEach(function(img) {
+    var a = document.createElement('a');
+    a.href = img.getAttribute('src');
+    a.setAttribute('data-fslightbox', 'gallery');
+    img.parentNode.insertBefore(a, img);
+    a.appendChild(img);
+    });
+    
+    refreshFsLightbox();
+    </script>
+
     </main>
 </body>
 </html>

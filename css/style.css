@@ -130,6 +130,10 @@ nav a.active {
   border-bottom: 3px solid #0077b6;
 }
 
+nav.tabb {
+  display: none;
+}
+
 .skip-link {
   color: rgb(70, 58, 51);
   position: absolute;
@@ -146,12 +150,74 @@ nav a.active {
   width: "40%";
 }
 
-@media (min-width: 800px) { /*desktop pixel*/
+@media (min-width: 700px) and (max-width: 1025px) {
+  nav a.active { 
+    font-weight: bold;
+    border-bottom: 3px solid rgb(243, 96, 5);
+  }
+
+  html {
+    scroll-padding-top: 70px;
+  }
+
+  nav.tabb {
+    display: block;
+    position: sticky; /* Sticky position */
+    top: 0; /* Align to the top of the viewport when it reaches this point */
+    z-index: 1000; /* Ensure it's on top of other content */
+    /* Add other styling as needed */
+  }  
+
+  nav.tabb {
+    border: none;
+    border-bottom: 5px solid #000000;
+    background-color: #f1e8e1;
+    text-align: center;
+    padding: 3px;
+  }
+
+  nav.tabb a {
+    border: 3px solid #39312d;
+    text-align: center;
+    padding: 1px;
+  }
+
   .skip-link {
     position: absolute;
     color: rgb(70, 58, 51);
     top: 10px;
     left: 10px;
+  }
+
+  .image-gridt {
+    display: grid;                    
+    grid-template-columns: 1fr 1fr;   
+    gap: 10px;                       
+  }
+  
+  .image-gridt img {
+    width: 80%;                     
+    height: auto;                    
+    display: block;                  
+  }
+  
+}
+
+@media (min-width: 1026px) { /*desktop pixel*/
+  .skip-link {
+    position: absolute;
+    color: rgb(70, 58, 51);
+    top: 10px;
+    left: 10px;
+  }
+
+  nav a.active { 
+    font-weight: bold;
+    border-bottom: 3px solid rgb(1, 133, 4);
+  }
+
+  nav.tabb {
+    display: none;
   }
 
   p {
